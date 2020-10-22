@@ -114,7 +114,7 @@ async function init() {
     // * ===============================
     // * Example: Authenticating a file
     // *--------------------------------
-    const CREATE_TAG = true;
+    const CREATE_TAG = false;
 
     if (CREATE_TAG) {
       // * Authenticate the file
