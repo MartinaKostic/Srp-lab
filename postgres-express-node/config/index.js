@@ -31,6 +31,17 @@ module.exports = {
     secret: process.env.JWT_SECRET,
     expiresIn: process.env.JWT_DURATION || "1h",
     algorithms:["HS256"],
-    exclude: { path: [ {url: "/api/login", methods: ["POST"]}]},
-  },
+    exclude: { 
+      path: [ 
+        {
+          url: "/api/login", 
+          methods: ["POST"],
+        },
+      ],
+    },
+},
+
+bcrypt:{
+  SALT_ROUNDS: process.env.SALT_ROUNDS || 12,
+},
 };
